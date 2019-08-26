@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="projet">
+            <h2><span jhiTranslate="bouleDeCristalApp.projet.detail.title">Projet</span> {{projet.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="bouleDeCristalApp.projet.annee">Annee</span></dt>
+                <dd>
+                    <span>{{projet.annee}}</span>
+                </dd>
+                <dt><span jhiTranslate="bouleDeCristalApp.projet.compte">Compte</span></dt>
+                <dd>
+                    <span>{{projet.compte}}</span>
+                </dd>
+                <dt><span jhiTranslate="bouleDeCristalApp.projet.client">Client</span></dt>
+                <dd>
+                    <div *ngIf="projet.client">
+                        <a [routerLink]="['/client', projet.client?.id, 'view']">{{projet.client?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/projet', projet.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

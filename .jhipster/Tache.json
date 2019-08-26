@@ -1,0 +1,37 @@
+{
+    "name": "Tache",
+    "fields": [
+        {
+            "fieldName": "label",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "artefact",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "projet",
+            "otherEntityRelationshipName": "taches",
+            "relationshipName": "projet",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "imputation",
+            "otherEntityRelationshipName": "tache",
+            "relationshipName": "imputations"
+        }
+    ],
+    "changelogDate": "20190826112200",
+    "entityTableName": "tache",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

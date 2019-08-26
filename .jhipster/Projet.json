@@ -1,0 +1,37 @@
+{
+    "name": "Projet",
+    "fields": [
+        {
+            "fieldName": "annee",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "compte",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "client",
+            "otherEntityRelationshipName": "projets",
+            "relationshipName": "client",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "tache",
+            "otherEntityRelationshipName": "projet",
+            "relationshipName": "taches"
+        }
+    ],
+    "changelogDate": "20190826112159",
+    "entityTableName": "projet",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

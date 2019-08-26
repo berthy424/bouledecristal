@@ -1,0 +1,43 @@
+{
+    "name": "Imputation",
+    "fields": [
+        {
+            "fieldName": "date",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "valeur",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "isReal",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "isFigee",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldName": "isRegularisation",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "tache",
+            "otherEntityRelationshipName": "imputations",
+            "relationshipName": "tache",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190826112201",
+    "entityTableName": "imputation",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

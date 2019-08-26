@@ -1,0 +1,49 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="imputation">
+            <h2><span jhiTranslate="bouleDeCristalApp.imputation.detail.title">Imputation</span> {{imputation.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="bouleDeCristalApp.imputation.date">Date</span></dt>
+                <dd>
+                    <span>{{imputation.date}}</span>
+                </dd>
+                <dt><span jhiTranslate="bouleDeCristalApp.imputation.valeur">Valeur</span></dt>
+                <dd>
+                    <span>{{imputation.valeur}}</span>
+                </dd>
+                <dt><span jhiTranslate="bouleDeCristalApp.imputation.isReal">Is Real</span></dt>
+                <dd>
+                    <span>{{imputation.isReal}}</span>
+                </dd>
+                <dt><span jhiTranslate="bouleDeCristalApp.imputation.isFigee">Is Figee</span></dt>
+                <dd>
+                    <span>{{imputation.isFigee}}</span>
+                </dd>
+                <dt><span jhiTranslate="bouleDeCristalApp.imputation.isRegularisation">Is Regularisation</span></dt>
+                <dd>
+                    <span>{{imputation.isRegularisation}}</span>
+                </dd>
+                <dt><span jhiTranslate="bouleDeCristalApp.imputation.tache">Tache</span></dt>
+                <dd>
+                    <div *ngIf="imputation.tache">
+                        <a [routerLink]="['/tache', imputation.tache?.id, 'view']">{{imputation.tache?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/imputation', imputation.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
