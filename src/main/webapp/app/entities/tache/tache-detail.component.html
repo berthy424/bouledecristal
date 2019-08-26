@@ -1,0 +1,37 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="tache">
+            <h2><span jhiTranslate="bouleDeCristalApp.tache.detail.title">Tache</span> {{tache.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="bouleDeCristalApp.tache.label">Label</span></dt>
+                <dd>
+                    <span>{{tache.label}}</span>
+                </dd>
+                <dt><span jhiTranslate="bouleDeCristalApp.tache.artefact">Artefact</span></dt>
+                <dd>
+                    <span>{{tache.artefact}}</span>
+                </dd>
+                <dt><span jhiTranslate="bouleDeCristalApp.tache.projet">Projet</span></dt>
+                <dd>
+                    <div *ngIf="tache.projet">
+                        <a [routerLink]="['/projet', tache.projet?.id, 'view']">{{tache.projet?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/tache', tache.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+id;date;valeur;is_real;is_figee;is_regularisation
+1;2019-08-26T04:51:15;53969;true;true;false
+2;2019-08-25T12:12:02;28093;true;true;false
+3;2019-08-26T07:59:03;29627;true;false;false
+4;2019-08-26T10:59:28;98688;false;true;false
+5;2019-08-26T06:35:50;29348;false;false;true
+6;2019-08-26T06:35:39;70685;true;true;true
+7;2019-08-25T16:51:22;60595;false;true;false
+8;2019-08-25T19:44:27;11586;true;true;true
+9;2019-08-25T20:24:27;44945;false;false;false
+10;2019-08-26T02:28:01;31098;true;false;true

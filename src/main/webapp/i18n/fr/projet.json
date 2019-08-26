@@ -1,0 +1,25 @@
+{
+  "bouleDeCristalApp": {
+    "projet": {
+      "home": {
+        "title": "Projets",
+        "createLabel": "Créer un nouveau Projet",
+        "createOrEditLabel": "Créer ou éditer un Projet",
+        "notFound": "Aucun Projet trouvé"
+      },
+      "created": "Un nouveau Projet a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Projet avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Projet avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Etes-vous certain de vouloir supprimer le Projet {{ id }} ?"
+      },
+      "detail": {
+        "title": "Projet"
+      },
+      "annee": "Annee",
+      "compte": "Compte",
+      "client": "Client",
+      "taches": "Taches"
+    }
+  }
+}

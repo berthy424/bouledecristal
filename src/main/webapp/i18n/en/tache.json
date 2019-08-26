@@ -1,0 +1,25 @@
+{
+  "bouleDeCristalApp": {
+    "tache": {
+      "home": {
+        "title": "Taches",
+        "createLabel": "Create a new Tache",
+        "createOrEditLabel": "Create or edit a Tache",
+        "notFound": "No Taches found"
+      },
+      "created": "A new Tache is created with identifier {{ param }}",
+      "updated": "A Tache is updated with identifier {{ param }}",
+      "deleted": "A Tache is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Tache {{ id }}?"
+      },
+      "detail": {
+        "title": "Tache"
+      },
+      "label": "Label",
+      "artefact": "Artefact",
+      "projet": "Projet",
+      "imputations": "Imputations"
+    }
+  }
+}

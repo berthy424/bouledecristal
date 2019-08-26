@@ -43,6 +43,13 @@ public class CacheConfiguration {
             createCache(cm, com.github.bouledecristal.domain.User.class.getName());
             createCache(cm, com.github.bouledecristal.domain.Authority.class.getName());
             createCache(cm, com.github.bouledecristal.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.github.bouledecristal.domain.Client.class.getName());
+            createCache(cm, com.github.bouledecristal.domain.Client.class.getName() + ".projets");
+            createCache(cm, com.github.bouledecristal.domain.Projet.class.getName());
+            createCache(cm, com.github.bouledecristal.domain.Projet.class.getName() + ".taches");
+            createCache(cm, com.github.bouledecristal.domain.Tache.class.getName());
+            createCache(cm, com.github.bouledecristal.domain.Tache.class.getName() + ".imputations");
+            createCache(cm, com.github.bouledecristal.domain.Imputation.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

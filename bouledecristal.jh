@@ -1,0 +1,34 @@
+
+entity Client {
+	label String
+}
+
+entity Projet {
+	annee Integer,
+    compte Integer
+}
+
+entity Tache {
+	label String,
+	artefact Integer
+}
+
+entity Imputation {
+	date Instant,
+    valeur Integer,
+    isReal Boolean,
+    isFigee Boolean,
+    isRegularisation Boolean
+}
+
+relationship ManyToOne {
+	Projet{client} to Client{projets},
+    Tache{projet} to Projet{taches},
+    Imputation{tache} to Tache{imputations}
+}
+
+
+
+
+
+
